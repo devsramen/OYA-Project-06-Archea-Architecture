@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    color: #A3A3A5;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    background: #121316;
+}
+.container{
+    width: 1240px;
+    margin: 0 auto;
+    /* border: 1px dotted red; */
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+span{
+    display: inline-block;
+}
+ol,ul{
+    list-style-type: none;
+}
+.dGrid{
+    display: grid;
+}
+/* NAV start */
+#nav{
+    width: 100%;
+    padding-top: 30px;
+    background: #121316;
+    position: fixed;
+    left: 50%;
+    top: 55px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+#nav .dGrid{
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #555557;
+}
+#nav .dGrid i{
+    margin-left: 8px;
+}
+/* NAV end */
+
+/* Banner start */
+#banner{
+    padding-top: 280px;
+}
+#banner h1{
+    width: 834px;
+    font-size: 110px;
+    font-weight: 700;
+    line-height: auto;
+    /* color: linear-gradient(45deg, black, red); */
+    color: #fff;
+    letter-spacing: -6px;
+}
+#banner h1 span{
+    color: rgba(255, 255, 255, 0.5);
+}
+/* Banner end */
+
+
+
+
+/* Banner start */
+/* Banner end */
