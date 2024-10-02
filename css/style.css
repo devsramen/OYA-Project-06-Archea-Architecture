@@ -274,7 +274,6 @@ ol,ul{
 /* Project start */
 #project{
     padding: 120px 0 160px 0;
-    border: 1px solid red;
 }
 #project h2 {
     width: 670px;
@@ -363,15 +362,268 @@ ol,ul{
     -ms-transform: translate(-50%, 8px);
     -o-transform: translate(-50%, 8px);
 }
-#project .gridContainer{
+#project .gridContainer {
     width: 1240px;
-    width: 882px;
-    border: 1px solid red;
+    height: 882px;
+    margin-top: 25px;
     display: grid;
-    grid-template: repeat(auto-fit, minmax(397px, 1fr)) / repeat(auto-fit, minmax(397px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(397px, 1fr));
+    grid-template-rows: repeat(12, 1fr);
+    grid-auto-flow: row;
     gap: 24px;
 }
 #project .gridContainer .gridItem{
-    background: #555557;
+    border: 0.1px dotted #555557;
+}
+#project .gridContainer .gridItem_1{
+    grid-row: span 12;
+}
+#project .gridContainer .gridItem_2{
+    grid-row: span 6;
+}
+#project .gridContainer .gridItem_2>div {
+    width: 100%;
+    height: 90.503%;
+    border: 1px solid #555557;
+}
+
+#project .gridContainer .gridItem_3{
+    grid-row: span 7;
+}
+
+#project .gridContainer .gridItem_4{
+    grid-row: span 6;
+}
+#project .gridContainer .gridItem_4>ul{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+#project .gridContainer .gridItem_4>ul li:first-child{
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+#project .gridContainer .gridItem_4>ul li:last-child{
+    position: relative;
+}
+#project .gridContainer .gridItem_4>ul li:last-child::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #555557;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -19px);
+    -webkit-transform: translate(-50%, -19px);
+    -moz-transform: translate(-50%, -19px);
+    -ms-transform: translate(-50%, -19px);
+    -o-transform: translate(-50%, -19px);
+}
+#project .gridContainer .gridItem_4 div{
+    width: 100%;
+    height: 90%;
+    border: 1px solid #555557;
+}
+#project .gridContainer .gridItem_5 {
+    grid-row: span 5;
+    align-self: end;
+}
+#project .gridContainer .gridItem_5>ul{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+#project .gridContainer .gridItem_5>ul li:first-child{
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+#project .gridContainer .gridItem_5 div {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #555557;
+}
+#project .gridContainer .gridItem_5>ul li:last-child{
+    position: relative;
+}
+#project .gridContainer .gridItem_5>ul li:last-child::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #555557;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -19px);
+    -webkit-transform: translate(-50%, -19px);
+    -moz-transform: translate(-50%, -19px);
+    -ms-transform: translate(-50%, -19px);
+    -o-transform: translate(-50%, -19px);
 }
 /* Project end */
+
+/* Awards start */
+#awards{
+    padding: 120px 0 160px 0;
+    border: 1px dotted red;
+}
+#awards h2 {
+    width: 707px;
+    margin: 0 auto;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    letter-spacing: -1.7px;
+    margin-bottom: 15px;
+}
+#awards p {
+    width: 482px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.60);
+    letter-spacing: -.7px;
+    margin-bottom: 50px;
+}
+#awards .dGrid{
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+}
+#awards .dGrid ul{
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    column-gap: 16px;
+}
+#awards .dGrid ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 28px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #999;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+#awards .dGrid ul li:hover a{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+#awards .dGrid a{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 28px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #999;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+#awards .dGrid a:hover{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+#awards .dGrid {
+    border-bottom: 1px solid rgba(113, 113, 115, 0.70);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+#awards .gridContainer {
+    width: 1240px;
+    height: 882px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(386px, 1fr));
+    grid-template-rows: repeat(8, 1fr);
+    grid-auto-flow: row;
+    gap: 24px;
+}
+#awards .gridContainer .gridItem{
+    border: 0.1px dotted #555557;
+    overflow: hidden;
+    /* background: green; */
+    position: relative;
+}
+#awards .gridContainer .gridItem .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#awards .gridContainer .gridItem .overlay span{
+    font-size: 20px;
+    font-weight: 500;
+    color: #121316;
+    text-transform: capitalize;
+    padding: 12px 24px;
+    background-color: #fff;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#awards .gridContainer .gridItem:hover .overlay{
+    opacity: 1;
+}
+#awards .gridContainer .gridItem_1{
+    padding: 24px;
+    grid-row: span 3;
+}
+#awards .gridContainer .gridItem_1 h3{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+}
+#awards .gridContainer .gridItem_1 h4{
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #fff;
+    letter-spacing: -2.5px;
+    margin-top: 24px;
+}
+#awards .gridContainer .gridItem_1 span{
+    text-transform: capitalize;
+    color: #B1B2B6;
+    margin-right: 15px;
+}
+#awards .gridContainer .gridItem_2{
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+#awards .gridContainer .gridItem_3{
+    grid-row: span 5;
+}
+
+#awards .gridContainer .gridItem_4{
+    grid-row: span 3;
+}
+
+
+#awards .gridContainer .gridItem_5 {
+    grid-row: span 3;
+}
+/* Awards end */
