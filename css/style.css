@@ -24,7 +24,6 @@ body{
 .container{
     width: 1240px;
     margin: 0 auto;
-    /* border: 1px dotted red; */
 }
 a{
     display: inline-block;
@@ -45,14 +44,14 @@ ol,ul{
     width: 100%;
     padding-top: 30px;
     background: #121316;
-    position: sticky;
-    left: 0;
+    position: fixed;
+    left: 50%;
     top: 0;
-    /* transform: translateX(-50%);
+    transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%); */
+    -o-transform: translateX(-50%);
     z-index: 999999999;
 }
 #nav .dGrid{
@@ -71,7 +70,7 @@ ol,ul{
 
 /* Banner start */
 #banner{
-    padding-top: 280px;
+    padding-top: 225px;
     padding-bottom: 100px;
     position: relative;
 }
@@ -81,7 +80,6 @@ ol,ul{
     font-weight: 700;
     line-height: 1.25;
     color: #fff;
-    /* color: linear-gradient(45deg, black, red); */
     letter-spacing: -6px;
 }
 #banner h1 span{
@@ -94,6 +92,11 @@ ol,ul{
     margin-top: 90px;
     position: relative;
     z-index: 2;
+}
+.bannerImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .bannerImage>i{
     width: 142px;
@@ -373,7 +376,12 @@ ol,ul{
     gap: 24px;
 }
 #project .gridContainer .gridItem{
-    border: 0.1px dotted #555557;
+    overflow: hidden;
+}
+#project .gridContainer .gridItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #project .gridContainer .gridItem_1{
     grid-row: span 12;
@@ -384,7 +392,6 @@ ol,ul{
 #project .gridContainer .gridItem_2>div {
     width: 100%;
     height: 90.503%;
-    border: 1px solid #555557;
 }
 
 #project .gridContainer .gridItem_3{
@@ -398,6 +405,8 @@ ol,ul{
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
+    position: relative;
+    z-index: 2;
 }
 #project .gridContainer .gridItem_4>ul li:first-child{
     font-size: 24px;
@@ -426,7 +435,6 @@ ol,ul{
 #project .gridContainer .gridItem_4 div{
     width: 100%;
     height: 90%;
-    border: 1px solid #555557;
 }
 #project .gridContainer .gridItem_5 {
     grid-row: span 5;
@@ -447,7 +455,6 @@ ol,ul{
 #project .gridContainer .gridItem_5 div {
     width: 100%;
     height: 300px;
-    border: 1px solid #555557;
 }
 #project .gridContainer .gridItem_5>ul li:last-child{
     position: relative;
@@ -470,10 +477,9 @@ ol,ul{
 
 /* Awards start */
 #awards{
-    padding: 120px 0 160px 0;
-    border: 1px dotted red;
+    padding: 100px 0;
 }
-#awards h2 {
+#awards .title {
     width: 707px;
     margin: 0 auto;
     font-size: 48px;
@@ -484,7 +490,7 @@ ol,ul{
     letter-spacing: -1.7px;
     margin-bottom: 15px;
 }
-#awards p {
+#awards .awardsSubTitle {
     width: 482px;
     margin: 0 auto;
     font-size: 20px;
@@ -555,8 +561,10 @@ ol,ul{
 #awards .gridContainer .gridItem{
     border: 0.1px dotted #555557;
     overflow: hidden;
-    /* background: green; */
     position: relative;
+}
+#awards .gridContainer .gridItem img{
+    object-fit: cover;
 }
 #awards .gridContainer .gridItem .overlay{
     width: 100%;
@@ -570,7 +578,7 @@ ol,ul{
     left: 0;
     top: 0;
 }
-#awards .gridContainer .gridItem .overlay span{
+#awards .gridContainer .gridItem .overlay a{
     font-size: 20px;
     font-weight: 500;
     color: #121316;
@@ -589,6 +597,7 @@ ol,ul{
 #awards .gridContainer .gridItem_1{
     padding: 24px;
     grid-row: span 3;
+    background: linear-gradient(to bottom right, #3C3F49, rgba(60, 63, 73, 0.01));
 }
 #awards .gridContainer .gridItem_1 h3{
     font-size: 28px;
@@ -625,5 +634,179 @@ ol,ul{
 
 #awards .gridContainer .gridItem_5 {
     grid-row: span 3;
+    padding: 24px;
+    background-color: #485518;
+}
+#awards .gridContainer .gridItem_5 h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+#awards .gridContainer .gridItem_5>ul {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin-top: 30px;
+    border-bottom: 2px solid rgba(181, 186, 163, 0.40);
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+}
+#awards .gridContainer .gridItem_5>ul li:first-child{
+    color: #fff;
+    position: relative;
+}
+#awards .gridContainer .gridItem_5>ul li:first-child::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 3px);
+    -webkit-transform: translate(-50%, 3px);
+    -moz-transform: translate(-50%, 3px);
+    -ms-transform: translate(-50%, 3px);
+    -o-transform: translate(-50%, 3px);
+}
+#awards .gridContainer .gridItem_5>p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #B0B1B5;
+    line-height: 1.65;
+    letter-spacing: -0.4px;
+    margin-top: 25px;
+}
+#awards .gridContainer .gridItem_5>p span{
+    color: #fff;
+}
+#awards .awardsBorderBottom{
+    width: 100%;
+    height: 4px;
+    background-color: rgba(217, 217, 217, 0.10);
+    margin-top: 32px;
+    position: relative;
+}
+#awards .awardsBorderBottom::before{
+    content: "";
+    width: 240px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.60);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 /* Awards end */
+
+/* Footer start */
+#footer{
+    padding-top: 100px;
+}
+#footer .dGrid{
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 407px);
+    justify-content: space-between;
+    column-gap:72px
+}
+#footer .dGrid .left{
+    grid-column: span 7;
+}
+#footer .dGrid .left .footerSubTitle{
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+#footer .dGrid .left ul{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+    border-bottom: 1px solid #40444F;
+    padding-bottom: 30px;
+}
+#footer .dGrid .left ul li:first-child{
+    font-size: 72px;
+    font-weight: 700;
+    color: #40444F;
+}
+#footer .dGrid .left ul li:last-child i{
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    color: #fff;
+    background-color: #40444F;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#footer .dGrid .left .footerIcon{
+    margin-top: 34px;
+}
+#footer .dGrid .left .footerIcon i{
+    font-size: 22px;
+    padding: 16px;
+    color: #C1C4CD;
+    background-color: rgba(64, 68, 79, 0.40);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 15px;
+}
+#footer .dGrid .right{
+    grid-column: span 5;
+    /* background-color: green; */
+    overflow: hidden;
+    position: relative;
+}
+#footer .dGrid .right img{
+    object-fit: cover;
+}
+#footer .dGrid .right .overlay{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+#footer .dGrid .right .overlay span{
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 10px;
+    letter-spacing: -0.40px;
+    border-bottom : 1px solid #fff;
+}
+#footer .footerBottom{
+    padding: 47px 0 48px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+}
+#footer .footerBottom span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+/* Footer end */
