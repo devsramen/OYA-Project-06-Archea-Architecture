@@ -721,7 +721,7 @@ ol,ul{
     color: #fff;
     letter-spacing: -0.5px;
 }
-#footer .dGrid .left ul{
+#footer .dGrid .left form{
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
@@ -730,23 +730,35 @@ ol,ul{
     border-bottom: 1px solid #40444F;
     padding-bottom: 30px;
 }
-#footer .dGrid .left ul li:first-child{
+input#email {
+    width: 100%;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 72px;
     font-weight: 700;
     color: #40444F;
+    background: transparent;
+    outline: none;
+    border: none;
 }
-#footer .dGrid .left ul li:last-child i{
+#footer .dGrid .left form i{
+    line-height: 56px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+#footer .dGrid .left form button{
     width: 56px;
     height: 56px;
-    text-align: center;
-    line-height: 56px;
-    color: #fff;
     background-color: #40444F;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+
 }
 #footer .dGrid .left .footerIcon{
     margin-top: 34px;
